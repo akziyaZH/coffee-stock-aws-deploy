@@ -14,18 +14,18 @@ const searchQuery = ref("")
 // to search by product category
 const activeCategory = ref<DrinkCategory | string>('')
 
-const searchProduct = computed(() => {
-  const query = searchQuery.value.trim().toLowerCase();
-
-  return products.value.filter(item => {
-    if (activeCategory.value && item.category !== activeCategory.value) {
-      return false
-    }
-    const matchesName = item.name.toLowerCase().includes(query);
-    const matchesCategory = item.category.toLowerCase().includes(query)
-    return matchesName || matchesCategory;
-  })
-})
+// const searchProduct = computed(() => {
+//   const query = searchQuery.value.trim().toLowerCase();
+//
+//   return products.value.filter(item => {
+//     if (activeCategory.value && item.category !== activeCategory.value) {
+//       return false
+//     }
+//     const matchesName = item.name.toLowerCase().includes(query);
+//     const matchesCategory = item.category.toLowerCase().includes(query)
+//     return matchesName || matchesCategory;
+//   })
+// })
 
 const toggleFilterCategory = (category: DrinkCategory) => {
   if (activeCategory.value === category) {
@@ -57,7 +57,6 @@ const filteredProducts = computed(() => {
             v-model.lazy.trim="searchQuery"
             placeholder="Search..."
             class="search-input"
-            @keyup.enter="searchProduct"
         />
       </div>
     </div>

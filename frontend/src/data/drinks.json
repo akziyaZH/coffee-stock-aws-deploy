@@ -1,0 +1,20 @@
+[
+  {
+    "id": "prod-1",
+    "name": "House Espresso Blend",
+    "category": "Beans",
+    "currentStock": 12,
+    "minThreshold": 6,
+    "unitType": "kg",
+    "costPerUnit": 18.50
+  },
+  {
+    "id": "prod-2",
+    "name": "Barista Oat Milk",
+    "category": "Alternative Milk",
+    "currentStock": 4,
+    "minThreshold": 10,
+    "unitType": "L",
+    "costPerUnit": 5.5
+  }
+]

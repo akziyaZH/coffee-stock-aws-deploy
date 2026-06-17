@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import StockCard from "@/components/StockCard.vue";
 import {MOCK_DRINKS} from "@/data/MockInventory";
-import {computed, Ref, ref} from "vue";
+import {computed, ref} from "vue";
 import StockType from "@/components/StockType.vue";
 import {CATEGORY_FILTER} from "@/data/TypeData";
 import {DrinkCategory} from "@/types/inventory";
